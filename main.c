@@ -11,6 +11,10 @@ void print_my_fancy_struct(struct my_fancy_struct mfs)
     printf("\t%s\n", mfs.pS);
 }
 
+// ToDo
+//void print_my_fancy_struct2()  // pass in a ptr to the array od structs & print each one
+
+
 void main()
 {
 char a_str[30] = "stupid string";
@@ -39,4 +43,6 @@ int num_of_elements_in_arr = sizeof(arr) / sizeof(arr[0]);
 for(int i=0; i < num_of_elements_in_arr; i++)
     print_my_fancy_struct(arr[i]);
 
+// call a better way to pass an array of structs, using pointers
+print_my_fancy_struct2
 }
