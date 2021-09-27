@@ -11,8 +11,13 @@ void print_my_fancy_struct(struct my_fancy_struct mfs)
     printf("\t%s\n", mfs.pS);
 }
 
-// ToDo
-//void print_my_fancy_struct2()  // pass in a ptr to the array od structs & print each one
+void print_my_fancy_struct2(struct my_fancy_struct *ptr) // pass in a ptr to the array od structs & print each one
+{
+	printf("In main: print mfs fields using POINTERS:\n");
+	printf("\t%d\n", ptr->x);
+	printf("\t%c\n", ptr->c);
+	printf("\t%s\n", ptr->pS);
+}
 
 
 void main()
@@ -44,5 +49,6 @@ for(int i=0; i < num_of_elements_in_arr; i++)
     print_my_fancy_struct(arr[i]);
 
 // call a better way to pass an array of structs, using pointers
-print_my_fancy_struct2
+for(int i=0; i < num_of_elements_in_arr; i++)
+    print_my_fancy_struct2(&(arr[i]));
 }
