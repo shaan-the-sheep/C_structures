@@ -51,4 +51,11 @@ for(int i=0; i < num_of_elements_in_arr; i++)
 // call a better way to pass an array of structs, using pointers
 for(int i=0; i < num_of_elements_in_arr; i++)
     print_my_fancy_struct2(&(arr[i]));
+
+// Or use the fact that an array name is always a pointer to the
+// first element of the array. We can use ptr arithmatic to access
+// each element turn by turn
+for(int i=0; i < num_of_elements_in_arr; i++)
+    print_my_fancy_struct2(arr + i);
+
 }
